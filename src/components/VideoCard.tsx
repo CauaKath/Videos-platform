@@ -22,7 +22,9 @@ export function VideoCard(props: VideoCardProps) {
   const isActiveVideo = slug === props.slug;
   
   return(
-    <Link to={`/main/video/${props.slug}`} className="group">
+    <Link to={`/main/video/${props.slug}`} className={classnames("group", {
+      "pointer-events-none": !isVideoAvailable,
+    })}>
       <span className="text-gray-300">
         {availableDateFormatted}
       </span>
