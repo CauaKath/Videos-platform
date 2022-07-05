@@ -1,0 +1,12 @@
+query GetVideoBySlug ($slug: String) {
+  video(where: {slug: $slug}) {
+    title
+    videoId
+    description
+    youtuber {
+      name
+      bio
+      avatarURL
+    }
+  }
+}

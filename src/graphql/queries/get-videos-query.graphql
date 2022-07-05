@@ -1,0 +1,9 @@
+query getVideos {
+  videos(orderBy: availableAt_ASC, stage: PUBLISHED) {
+    id
+    videoType
+    availableAt
+    title
+    slug
+  }
+}
